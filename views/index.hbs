@@ -1,2 +1,196 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My First Map</title>
+    <style>
+        html,
+        body,
+        div,
+        span,
+        applet,
+        object,
+        iframe,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        blockquote,
+        pre,
+        a,
+        abbr,
+        acronym,
+        address,
+        big,
+        cite,
+        code,
+        del,
+        dfn,
+        em,
+        img,
+        ins,
+        kbd,
+        q,
+        s,
+        samp,
+        small,
+        strike,
+        strong,
+        sub,
+        sup,
+        tt,
+        var,
+        b,
+        u,
+        i,
+        center,
+        dl,
+        dt,
+        dd,
+        ol,
+        ul,
+        li,
+        fieldset,
+        form,
+        label,
+        legend,
+        table,
+        caption,
+        tbody,
+        tfoot,
+        thead,
+        tr,
+        th,
+        td,
+        article,
+        aside,
+        canvas,
+        details,
+        embed,
+        figure,
+        figcaption,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        output,
+        ruby,
+        section,
+        summary,
+        time,
+        mark,
+        audio,
+        video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline
+        }
+
+        article,
+        aside,
+        details,
+        figcaption,
+        figure,
+        footer,
+        header,
+        hgroup,
+        menu,
+        nav,
+        section {
+            display: block
+        }
+
+        body {
+            line-height: 1
+        }
+
+        ol,
+        ul {
+            list-style: none
+        }
+
+        blockquote,
+        q {
+            quotes: none
+        }
+
+        blockquote:before,
+        blockquote:after,
+        q:before,
+        q:after {
+            content: '';
+            content: none
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        html,
+        body {
+            overflow: hidden;
+        }
+
+        #map {
+            height: 100vh;
+            width: 100vw;
+        }
+        #filter-widget {
+            padding: 10px;
+            z-index: 1000;
+            position: absolute;
+            left: 0;
+            top: 100px;
+            background: rgba(255, 255, 255, 0.85)
+        }
+        #filter-widget button {
+            margin-top: 20px;
+        }
+
+        #newPatinete {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            transition: all 0.5s;
+            z-index: 1000;
+            width: 200px;
+            background: white;
+            padding: 20px;
+        }
+
+        #newPatinete.open {
+            left: 200px;
+            transition: all 0.5s;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form id="newPatinete">
+        <input type="text" name="lat" placeholder="lat" value="41.3977381">
+
+        <input type="text" name="lng" placeholder="lng" value="2.190471916">
+
+        <input type="range" name="state" min="0" max="5" step="0.5">
+
+        <button id="newPatineteButton">Submit</button>
+    </form>
+    <div id="map"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDm_Pc1bLgLi60UI91XcJ7jpwJzG8NgU4w"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+    <script type="text/javascript" src="javascripts/app.js"></script>
+</body>
+
+</html>
